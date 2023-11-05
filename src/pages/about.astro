@@ -12,9 +12,9 @@ const happy = true;
 const finished = false;
 const goal = 3;
 
-const skillColor = "navy";
-const fontWeight = "bold";
-const textCase = "uppercase";
+const SkillColor = "navy";
+const FontWeight = "bold";
+const TextCase = "uppercase";
 ---
 
 <html lang="en">
@@ -60,17 +60,16 @@ const textCase = "uppercase";
       )
     }
   </body>
+  <style>
+    h1 {
+      color: purple;
+      font-size: 4rem;
+    }
+
+    .skill {
+      color: var(--SkillColor);
+      font-weight: var(--FontWeight);
+      text-transform: var(--TextCase);
+    }
+  </style>
 </html>
-
-<style>
-  h1 {
-    color: purple;
-    font-size: 4rem;
-  }
-
-  .skill {
-    color: var(--skillColor);
-    font-weight: var(--fontWeight);
-    text-transform: var(--textCase);
-  }
-</style>
