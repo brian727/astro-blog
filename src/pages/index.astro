@@ -1,7 +1,8 @@
 ---
 import "../styles/global.css";
-import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+const pageTitle = "Home";
 ---
 
 <html lang="en">
@@ -10,13 +11,17 @@ import Footer from "../components/Footer.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>{pageTitle}</title>
   </head>
 
   <body>
-    <Navigation />
+    <Header />
     <h1>Blog Demo</h1>
     <h2>Powered by Astro & Tailwind CSS</h2>
     <Footer />
+
+    <script>
+      import "../scripts/menu.js";
+    </script>
   </body>
 </html>
