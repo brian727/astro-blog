@@ -1,4 +1,8 @@
 ---
+import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+
 const pageTitle = "About Me";
 const identity = {
   firstName: "Sarah",
@@ -26,6 +30,7 @@ const TextCase = "uppercase";
     <title>{pageTitle}</title>
   </head>
   <body>
+    <Navigation />
     <h1>{pageTitle}</h1>
 
     <p>Here are a few facts about me:</p>
@@ -43,7 +48,8 @@ const TextCase = "uppercase";
         )
       }
     </ul>
-    <p>My skills are:</p>
+
+    <p>SKILLS:</p>
     <ul>
       {skills.map((skill) => <li class="skill">{skill}</li>)}
     </ul>
@@ -59,6 +65,7 @@ const TextCase = "uppercase";
         <p>My goal is not 3 days.</p>
       )
     }
+    <Footer />
   </body>
   <style>
     h1 {
@@ -67,9 +74,9 @@ const TextCase = "uppercase";
     }
 
     .skill {
-      color: var(--SkillColor);
-      font-weight: var(--FontWeight);
-      text-transform: var(--TextCase);
+      color: navy;
+      font-weight: bold;
+      text-transform: uppercase;
     }
   </style>
 </html>
