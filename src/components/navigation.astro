@@ -2,8 +2,11 @@
 
 ---
 
-<div class="nav-links">
+<div class="nav-links" transition:animate="slide">
   <a href="/">Home</a>
   <a href="/about/">About</a>
   <a href="/blog/">Blog</a>
+  <a href="/tags">Tag Index</a>
+  <!-- data-attribute here forces browser to reload entire page (for PDFs) -->
+  <a href="/resume" data-astro-reload>Resume</a>
 </div>
