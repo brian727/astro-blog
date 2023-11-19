@@ -1,6 +1,8 @@
 ---
+import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = "About";
+import Navigation from "../components/Navigation.astro";
+const { pageTitle } = Astro.props;
 
 const identity = {
   firstName: "Sarah",
@@ -14,12 +16,12 @@ const happy = true;
 const finished = false;
 const goal = 3;
 
-const SkillColor = "navy";
-const FontWeight = "bold";
-const TextCase = "uppercase";
+const skillColor = "green";
+const fontWeight = "bold";
+const textCase = "uppercase";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout title="About">
   <p>Here are a few facts about me:</p>
   <ul>
     <li>My name is {identity.firstName}.</li>
@@ -60,7 +62,7 @@ const TextCase = "uppercase";
   }
 
   .skill {
-    color: navy;
+    color: green;
     font-weight: bold;
     text-transform: uppercase;
   }
